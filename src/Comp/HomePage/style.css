@@ -1,0 +1,164 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden; 
+  -ms-overflow-style: none;
+  background-color: aliceblue;
+
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#homeScreen-cont {
+  width: 99%;
+  max-width: 33.75rem;
+  height: calc(var(--vh) * 99);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ 
+  overflow-x: hidden;
+
+}
+#header-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.25rem;
+  gap: 5x;
+}
+#title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+#search {
+  height: 2.5rem;
+  width: 17.5rem;
+  padding-left: .625rem;
+  border: .0625rem solid rgba(250, 128, 114, 0.573);
+  border-radius: .3125rem;
+}
+.wrapCards{
+flex: 1 1 auto;  /* ימלא את השטח הפנוי */
+  display: flex;
+  flex-direction: column;
+  padding-bottom:70px;;
+  margin-top: .625rem;
+  gap: .625rem;
+  background-color: aliceblue;
+   overflow-y: auto; 
+  -ms-overflow-style: none;
+  padding-top: 10px;
+
+}
+.wrapCards::-webkit-scrollbar {
+  display: none;
+}
+.listCard-cont{
+  width: 93%; 
+ min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(231, 231, 230, 0.937);
+  border: .0625rem solid rgb(231, 204, 204);
+  border-bottom: .125rem solid rgb(231, 204, 204);
+  overflow: hidden;   
+  border-radius: .3125rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit; 
+  
+  padding-right: .3125rem;
+  padding-left: .3125rem;
+  margin-left: .3125rem;
+  margin-right: .3125rem;
+}
+.listCard-cont:hover{
+  background-color: rgba(231, 231, 230, 0.578);
+  transition: transform 0.3s ease;
+  transform: scale(1.02)
+;
+}
+.listCard-cont img{
+  height:90px ;
+  width:90px ;
+  border: .0625rem solid salmon;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+.LeftSide{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-right: 100px;
+}
+#foot-cont {
+  width: 100%;
+  max-width: 33.75rem;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: .125rem solid plum;
+  position: fixed;
+  bottom: env(safe-area-inset-bottom);
+  height: 3.75rem; /* או הגובה שלך */
+  z-index: 10;
+  
+}
+#foot-cont img {
+  height: 50px;
+  width: 50px;
+
+}
+#notFound{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+}
+@media (max-width: 520px) {
+  #homeScreen-cont {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    border-radius: 0;
+    align-items: stretch;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #search {
+    width: 70%;
+  }
+  .listCard-cont {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #foot-cont {
+    width: 100vw;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
